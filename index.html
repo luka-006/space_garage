@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ambijentalno osvjetljenje i zvjezdano nebo za auto, Knin</title>
+<meta name="description" content="Ambijentalno osvjetljenje, zvjezdano nebo, tapaciranje i ugradnja multimedije u Kninu. Mali servis radimo kod tebe. Nazovi 098 136 3967.">
+<meta name="theme-color" content="#060509">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.spacegarage.net/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="hr_HR">
+<meta property="og:site_name" content="Space Garage MS">
+<meta property="og:url" content="https://www.spacegarage.net/">
+<meta property="og:title" content="Space Garage MS | Ambijentalno osvjetljenje i zvjezdano nebo, Knin">
+<meta property="og:description" content="Tvoj auto. Tvoj stil. Naša strast. Ambijentalno osvjetljenje, zvjezdano nebo i tapaciranje u Kninu.">
+<meta property="og:image" content="https://www.spacegarage.net/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Zvjezdano nebo i ambijentalno osvjetljenje u autu">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+@property --ang{syntax:"<angle>";inherits:false;initial-value:0deg}
+:root{
+  --void:#060509; --carbon:#0D0A14; --carbon-2:#141020;
+  --line:rgba(255,255,255,.09);
+  --text:#E9E5F3; --muted:#8E87A5;
+  --glow:#A855F7; --glow-rgb:168,85,247;
+  --wrap:1180px; --gut:22px;
+  --cut:20px 4px 20px 4px;      /* potpisni asimetrični kut */
+  --cut-r:4px 20px 4px 20px;
+}
+*{box-sizing:border-box}
+a,button,select,input,[role="button"]{-webkit-tap-highlight-color:transparent}
+:focus:not(:focus-visible){outline:none}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--void);color:var(--text);
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+h1,h2,h3,.tagline{font-family:Saira,Impact,sans-serif;font-weight:700;line-height:1.02;
+  letter-spacing:-.018em;margin:0;text-transform:uppercase}
+.tagline{font-size:clamp(2.4rem,6.6vw,4.8rem);margin:0}
+.lede h1{display:inline;font:inherit;color:inherit;text-transform:none;letter-spacing:normal;margin:0}
+h2{font-size:clamp(1.8rem,4.1vw,2.9rem)}
+h3{font-size:1.02rem;letter-spacing:.01em}
+p{margin:0 0 1em} p:last-child{margin-bottom:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.sec{position:relative;padding:96px 0}
+.muted{color:var(--muted)}
+.head{max-width:60ch}
+.head p{color:var(--muted);margin-top:15px}
+
+/* LED traka za scroll */
+.strip{position:fixed;left:0;top:0;bottom:0;width:2px;z-index:90;
+  background:rgba(255,255,255,.05);pointer-events:none}
+.strip i{position:absolute;left:0;top:0;width:100%;height:0;display:block;
+  background:linear-gradient(180deg,rgba(var(--glow-rgb),.2),var(--glow));
+  box-shadow:0 0 12px rgba(var(--glow-rgb),.85),0 0 34px rgba(var(--glow-rgb),.4);
+  transition:background .5s,box-shadow .5s}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:80;background:rgba(6,5,9,.84);
+  backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid var(--line)}
+.bar{max-width:var(--wrap);margin:0 auto;padding:12px var(--gut);
+  display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.brand img{height:40px;width:auto;
+  filter:drop-shadow(0 0 9px rgba(var(--glow-rgb),.55));transition:filter .5s,transform .3s}
+.brand:hover img{transform:translateY(-2px)}
+.foot-logo{height:62px;width:auto;opacity:.9;
+  filter:drop-shadow(0 0 12px rgba(var(--glow-rgb),.35));transition:filter .5s}
+.brand b{font-family:Saira,sans-serif;font-weight:700;font-size:.95rem;
+  letter-spacing:.19em;display:block;line-height:1.1}
+.brand small{display:block;font-size:.55rem;letter-spacing:.32em;color:var(--muted);margin-top:3px}
+nav{display:none;gap:26px}
+nav a{color:var(--text);text-decoration:none;font-size:.77rem;font-weight:500;
+  letter-spacing:.13em;text-transform:uppercase;opacity:.65;position:relative;padding:5px 0}
+nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--glow);
+  box-shadow:0 0 8px var(--glow);transform:scaleX(0);transform-origin:left;transition:transform .28s}
+nav a:hover{opacity:1} nav a:hover::after{transform:scaleX(1)}
+@media(min-width:1060px){nav{display:flex}}
+
+/* radno vrijeme uživo */
+.live{display:none;align-items:center;gap:9px;font-size:.68rem;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--muted);white-space:nowrap;text-decoration:none;
+  border:1px solid transparent;border-radius:999px;padding:7px 4px;transition:all .3s}
+.live .led{width:7px;height:7px;border-radius:50%;background:#4ADE80;flex:none;
+  box-shadow:0 0 9px #4ADE80;animation:beat 3.4s ease-in-out infinite}
+.live .mini{display:none;align-items:center;gap:6px;color:#fff;font-weight:600}
+.live .mini svg{width:13px;height:13px}
+/* zatvoreno: crveno i postaje gumb za poziv */
+.live.shut{color:#FCA5A5;border-color:rgba(248,113,113,.42);
+  background:rgba(248,113,113,.08);padding:7px 14px 7px 12px}
+.live.shut .led{background:#F87171;box-shadow:0 0 9px #F87171;animation:none}
+.live.shut .mini{display:inline-flex}
+.live.shut:hover{border-color:#F87171;background:rgba(248,113,113,.16)}
+.live.shut .sep{opacity:.5}
+@keyframes beat{0%,100%{opacity:1}50%{opacity:.6}}
+@media(min-width:600px){.live{display:flex}}
+@media(max-width:900px){.live .txt{display:none}}
+
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:Inter,sans-serif;font-weight:600;font-size:.93rem;text-decoration:none;
+  padding:14px 26px;border-radius:10px;border:1px solid transparent;cursor:pointer;
+  transition:transform .22s,box-shadow .3s,background .3s,border-color .3s,color .3s}
+.btn svg{width:17px;height:17px;flex:none;transition:transform .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn--glow{background:rgba(var(--glow-rgb),.15);color:#fff;border-color:rgba(var(--glow-rgb),.55);
+  box-shadow:inset 0 0 22px rgba(var(--glow-rgb),.14)}
+.btn--glow:hover{background:rgba(var(--glow-rgb),.25);border-color:var(--glow);
+  box-shadow:0 0 26px rgba(var(--glow-rgb),.5),inset 0 0 28px rgba(var(--glow-rgb),.22)}
+.btn--glow:hover svg{transform:rotate(-12deg) scale(1.1)}
+.btn--line{background:transparent;color:var(--text);border-color:var(--line)}
+.btn--line:hover{border-color:rgba(255,255,255,.34);color:#fff}
+.btn--line:hover svg{transform:translateX(3px)}
+.btn[disabled]{opacity:.4;pointer-events:none}
+.bar .btn{display:none;padding:11px 19px;font-size:.85rem}
+@media(min-width:720px){.bar .btn{display:inline-flex}}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);padding:64px 0 76px}
+/* SIGNATURA: pravo zvjezdano nebo iz auta kao pozadina heroja.
+   Vidi se prigušeno svugdje, a jako tamo gdje je kursor.
+   Kao da svjetlom prelaziš po krovu. */
+.film{position:absolute;inset:0;z-index:0;overflow:hidden;
+  --mx:50%; --my:34%; --rad:520px;
+  -webkit-mask-image:radial-gradient(circle var(--rad) at var(--mx) var(--my),
+    #000 0%, rgba(0,0,0,.78) 36%, rgba(0,0,0,.52) 72%, rgba(0,0,0,.4) 100%);
+  mask-image:radial-gradient(circle var(--rad) at var(--mx) var(--my),
+    #000 0%, rgba(0,0,0,.78) 36%, rgba(0,0,0,.52) 72%, rgba(0,0,0,.4) 100%)}
+.film video{width:100%;height:100%;object-fit:cover;
+  filter:blur(9px) saturate(1.7) brightness(1.55);transform:scale(1.08)}
+.film::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(6,5,9,.05) 0%,rgba(6,5,9,.42) 58%,rgba(6,5,9,.9) 100%)}
+@media(hover:none){.film{--rad:560px}}
+.hero .veil{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(110% 75% at 82% 14%,rgba(var(--glow-rgb),.2) 0%,transparent 58%);
+  transition:background .6s}
+.hero .wrap{position:relative;z-index:2}
+.hgrid{display:grid;gap:44px;align-items:center}
+@media(min-width:980px){.hgrid{grid-template-columns:1fr 1.02fr;gap:60px}}
+.tagline span{display:block}
+.tagline .lit{color:var(--glow);
+  text-shadow:0 0 26px rgba(var(--glow-rgb),.6),0 0 70px rgba(var(--glow-rgb),.32);
+  transition:color .5s,text-shadow .5s}
+.lede{font-size:clamp(1rem,1.85vw,1.16rem);color:var(--muted);max-width:42ch;margin:24px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+/* preview koji mijenja boju */
+.prev{position:relative;border-radius:var(--cut);overflow:hidden;border:1px solid var(--line);
+  aspect-ratio:3/4;background:#08060d;
+  box-shadow:0 0 0 1px rgba(var(--glow-rgb),.12),0 30px 80px -30px rgba(var(--glow-rgb),.5);
+  transition:box-shadow .6s}
+.prev img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  transition:opacity .45s ease}
+.prev img.off{opacity:0}
+.amb{transition:opacity .3s}
+.prev .bar-b{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:16px 18px;
+  background:linear-gradient(180deg,transparent,rgba(6,5,9,.88));
+  font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#fff}
+.amb{margin-top:22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.amb .lbl{font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+.dots{display:flex;gap:10px}
+.dots{position:relative}
+.dot{position:relative;width:30px;height:30px;border-radius:50%;border:0;padding:0;
+  cursor:pointer;background:var(--c);
+  box-shadow:inset 0 2px 5px rgba(255,255,255,.45),inset 0 -3px 7px rgba(0,0,0,.4),
+             0 0 0 1px rgba(255,255,255,.14);
+  transition:transform .28s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+.dot::after{content:"";position:absolute;inset:-5px;border-radius:50%;
+  border:1px solid var(--c);opacity:0;transform:scale(.72);pointer-events:none;
+  transition:opacity .35s,transform .45s cubic-bezier(.22,.61,.36,1)}
+.dot:hover{transform:scale(1.18) translateY(-2px)}
+.dot[aria-pressed="true"]{transform:scale(1.14);
+  box-shadow:inset 0 2px 5px rgba(255,255,255,.5),inset 0 -3px 7px rgba(0,0,0,.35),
+             0 0 0 2px rgba(255,255,255,.85),0 0 22px var(--c)}
+.dot[aria-pressed="true"]::after{opacity:.85;transform:scale(1);
+  animation:dotRing 3.2s ease-out infinite}
+@keyframes dotRing{
+  0%{opacity:0;transform:scale(1)}
+  18%{opacity:.7;transform:scale(1.08)}
+  80%{opacity:0;transform:scale(1.7)}
+  100%{opacity:0;transform:scale(1.7)}}
+
+/* USLUGE */
+.svcs{margin-top:40px;display:grid;grid-template-columns:1fr;gap:14px;
+  --cyc:9s;--step:1.125s}
+@media(min-width:700px){.svcs{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1060px){.svcs{grid-template-columns:repeat(4,1fr)}}
+
+.card{position:relative;overflow:hidden;background:var(--carbon);
+  border:1px solid var(--line);border-radius:var(--cut);padding:30px 24px 26px;
+  display:flex;flex-direction:column;min-height:238px;
+  opacity:0;transform:translateY(22px);
+  transition:border-color .4s,transform .5s cubic-bezier(.22,.61,.36,1),
+             box-shadow .4s,background .4s}
+.card:nth-child(even){border-radius:var(--cut-r)}
+@keyframes cardIn{to{opacity:1;transform:none}}
+
+/* Rub je sam gradijent (padding-box / border-box), pa prati zaobljene
+   kutove točno. Rotira se kut gradijenta, ne element. */
+.card{border:1.5px solid transparent;
+  background:
+    linear-gradient(150deg,var(--carbon-2),var(--carbon)) padding-box,
+    conic-gradient(from var(--ang),
+      rgba(var(--glow-rgb),.17) 0deg,
+      rgba(var(--glow-rgb),.17) 190deg,
+      rgba(var(--glow-rgb),.55) 250deg,
+      rgba(var(--glow-rgb),1) 292deg,
+      rgba(255,255,255,.75) 300deg,
+      rgba(var(--glow-rgb),.35) 322deg,
+      rgba(var(--glow-rgb),.17) 360deg) border-box;
+  animation:cardIn .6s cubic-bezier(.22,.61,.36,1) forwards paused,
+            rim 9s linear infinite}
+.svcs.in .card{animation-play-state:running,running;
+  animation-delay:calc(var(--i) * 85ms),calc(var(--i) * -1.1s)}
+@keyframes rim{to{--ang:360deg}}
+
+.card .no{position:absolute;top:20px;right:22px;font-family:Saira,sans-serif;font-weight:700;
+  font-size:2.6rem;line-height:1;color:rgba(255,255,255,.045);letter-spacing:-.04em;
+  transition:color .45s}
+.card:hover .no{color:rgba(var(--glow-rgb),.26)}
+
+.card .ring{position:relative;z-index:2;width:54px;height:54px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+  border:1px solid rgba(var(--glow-rgb),.32);background:rgba(var(--glow-rgb),.07);
+  transition:border-color .45s,background .45s,box-shadow .45s,transform .45s}
+.card .wash{position:absolute;inset:0;pointer-events:none;opacity:0;
+  background:radial-gradient(120% 80% at 16% -8%,rgba(var(--glow-rgb),.32),transparent 64%);
+  transition:opacity .5s ease}
+.card:hover .wash{opacity:1}
+.card .ring svg{width:25px;height:25px;color:var(--glow);transition:color .45s,filter .45s}
+
+.card h3{position:relative;z-index:2;color:#fff;font-size:1.02rem;letter-spacing:.01em}
+.card p{position:relative;z-index:2;margin-top:9px;font-size:.87rem;color:var(--muted);
+  line-height:1.6}
+.card .tag{position:absolute;left:24px;bottom:22px;z-index:2}
+
+.card:hover{transform:translateY(-6px);box-shadow:0 22px 46px -24px rgba(var(--glow-rgb),.95)}
+.card:hover .ring{transform:scale(1.08);border-color:var(--glow);
+  background:rgba(var(--glow-rgb),.16);
+  box-shadow:0 0 26px -4px rgba(var(--glow-rgb),.95),inset 0 0 18px rgba(var(--glow-rgb),.3)}
+.card:hover .ring svg{filter:drop-shadow(0 0 10px rgba(var(--glow-rgb),.95))}
+
+.card .tag{font-size:.55rem;letter-spacing:.2em;white-space:nowrap;text-transform:uppercase;
+  color:var(--glow);border:1px solid rgba(var(--glow-rgb),.45);border-radius:20px;
+  padding:4px 10px;transition:color .5s,border-color .5s}
+
+/* MOBILNI — istaknuto */
+.mob{background:radial-gradient(85% 130% at 6% 0%,rgba(var(--glow-rgb),.15) 0%,transparent 62%),var(--carbon);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .6s}
+.hl{position:relative;border:1px solid rgba(var(--glow-rgb),.55);border-radius:var(--cut);
+  background:rgba(var(--glow-rgb),.06);padding:38px 32px;margin-top:36px;overflow:hidden;
+  box-shadow:0 0 40px -12px rgba(var(--glow-rgb),.45),inset 0 0 60px -30px rgba(var(--glow-rgb),.7);
+  transition:border-color .5s,box-shadow .5s,background .5s}
+.hl::before{content:"";position:absolute;left:-2px;top:0;bottom:0;width:3px;background:var(--glow);
+  box-shadow:0 0 16px var(--glow);transition:background .5s,box-shadow .5s}
+.hl .pill{display:inline-block;font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--glow);border:1px solid rgba(var(--glow-rgb),.5);border-radius:20px;
+  padding:5px 13px;margin-bottom:16px;transition:color .5s,border-color .5s}
+.hl h3{font-size:clamp(1.5rem,3vw,2.1rem);color:#fff}
+.split{display:grid;gap:34px;margin-top:24px}
+@media(min-width:880px){.split{grid-template-columns:1fr 1fr;gap:54px;align-items:start}}
+.chk{list-style:none;padding:0;margin:0}
+.chk li{position:relative;padding-left:28px;margin-bottom:12px;color:var(--muted)}
+.chk li::before{content:"";position:absolute;left:0;top:11px;width:12px;height:1px;background:var(--glow);
+  box-shadow:0 0 7px var(--glow);transition:background .5s,box-shadow .5s}
+.clock{position:relative;width:176px;aspect-ratio:1;display:grid;place-items:center}
+.clock svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.ck-track{fill:none;stroke:rgba(255,255,255,.07);stroke-width:1.6}
+.ck-ticks line{stroke:rgba(255,255,255,.22);stroke-width:1.6;stroke-linecap:round}
+.ck-arc{fill:none;stroke:var(--glow);stroke-width:2.4;stroke-linecap:round;
+  stroke-dasharray:101;stroke-dashoffset:101;
+  transform-box:view-box;transform-origin:70px 70px;transform:rotate(-90deg);
+  filter:drop-shadow(0 0 5px rgba(var(--glow-rgb),.8));transition:stroke .5s}
+.clock.in .ck-arc{animation:drawArc 2.8s cubic-bezier(.45,.05,.25,1) forwards}
+@keyframes drawArc{to{stroke-dashoffset:0}}
+
+/* Točka i rep su jedan div koji se samo okreće. Sjaj se nacrta jednom,
+   pa se okretanje odvija na grafičkoj i ne zapinje na mobitelu. */
+.ck-orbit{position:absolute;inset:0;border-radius:50%;opacity:0;pointer-events:none;
+  will-change:transform}
+.ck-orbit::before{content:"";position:absolute;inset:0;border-radius:50%;
+  background:conic-gradient(from 0deg,transparent 0deg 285deg,
+    rgba(var(--glow-rgb),.0) 285deg,rgba(var(--glow-rgb),.75) 356deg,transparent 360deg);
+  -webkit-mask:radial-gradient(circle closest-side,transparent 88.6%,#000 89.6%,#000 93.2%,transparent 94.2%);
+  mask:radial-gradient(circle closest-side,transparent 88.6%,#000 89.6%,#000 93.2%,transparent 94.2%)}
+.ck-orbit i{position:absolute;left:50%;top:4.2857%;width:7px;height:7px;margin:-3.5px 0 0 -3.5px;
+  border-radius:50%;background:#fff;
+  box-shadow:0 0 6px 1px rgba(var(--glow-rgb),.95),0 0 14px 3px rgba(var(--glow-rgb),.45)}
+.clock.in .ck-orbit{animation:orbitIn 1.6s 2.6s ease forwards,orbitSpin 24s 2.6s linear infinite}
+@keyframes orbitIn{to{opacity:1}}
+@keyframes orbitSpin{to{transform:rotate(360deg)}}
+.clock .big{position:relative;margin:0;font-size:2.7rem}
+.big{font-family:Saira,sans-serif;font-weight:700;font-size:3.2rem;line-height:1;color:var(--glow);
+  text-shadow:0 0 30px rgba(var(--glow-rgb),.5);transition:color .5s,text-shadow .5s}
+
+/* GALERIJA */
+
+/* ---------- česta pitanja ---------- */
+.faq{max-width:780px;margin-top:30px;display:flex;flex-direction:column;gap:10px}
+.faq details{background:var(--carbon);border:1px solid var(--line);border-radius:var(--cut);
+  padding:0 22px;transition:border-color .3s}
+.faq details[open]{border-color:rgba(var(--glow-rgb),.4)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 34px 18px 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:4px;top:50%;width:8px;height:8px;
+  border-right:2px solid var(--glow);border-bottom:2px solid var(--glow);
+  transform:translateY(-70%) rotate(45deg);transition:transform .3s,border-color .5s}
+.faq details[open] summary::after{transform:translateY(-25%) rotate(225deg)}
+.faq h3{display:inline;font-family:Inter,sans-serif;font-size:1rem;font-weight:600;
+  text-transform:none;letter-spacing:0;line-height:1.45;color:#fff}
+.faq p{color:var(--muted);margin:0 0 18px;line-height:1.65}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.fnav{display:flex;flex-wrap:wrap;gap:6px 18px}
+.fnav a,.foot a{color:var(--muted);text-decoration:none;transition:color .25s}
+.fnav a:hover,.foot a:hover{color:#fff}
+
+/* ---------- upit ---------- */
+.book{background:var(--carbon);border-top:1px solid var(--line)}
+.bform{display:grid;gap:12px;margin-top:28px;max-width:620px}
+@media(min-width:620px){.bform{grid-template-columns:1fr 1fr}.bform .full{grid-column:1/-1}}
+.bform input,.bform select{width:100%;font-family:Inter,sans-serif;font-size:1rem;color:#fff;
+  background-color:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:10px;
+  padding:15px 16px;-webkit-appearance:none;appearance:none;
+  transition:border-color .2s,background-color .2s,box-shadow .2s}
+.bform select{cursor:pointer;padding-right:42px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%238E87A5' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 16px center}
+.bform select option{background:#12101C;color:#fff}
+.bform input::placeholder{color:#6B6485}
+.bform input:hover,.bform select:hover{border-color:rgba(255,255,255,.2)}
+.bform input:focus,.bform select:focus{outline:none;border-color:var(--glow);
+  background-color:rgba(255,255,255,.07);box-shadow:0 0 0 3px rgba(var(--glow-rgb),.18)}
+.bform .btn{padding:16px 22px}
+.note{font-size:.84rem;color:var(--muted);margin-top:14px}
+
+/* ---------- galerija ---------- */
+.gal{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:34px}
+.gal .tile{flex:0 0 100%}
+@media(min-width:620px){.gal .tile{flex-basis:calc((100% - 14px) / 2)}}
+@media(min-width:980px){.gal .tile{flex-basis:calc((100% - 28px) / 3)}}
+.tile{position:relative;aspect-ratio:3/4;overflow:hidden;display:block;width:100%;padding:0;
+  border:1px solid var(--line);border-radius:var(--cut);background:var(--carbon);
+  cursor:zoom-in;opacity:0;transform:translateY(18px);
+  transition:border-color .35s,transform .4s cubic-bezier(.22,.61,.36,1)}
+.tile:nth-child(3n+2){border-radius:var(--cut-r)}
+.gal.in .tile{animation:tileIn .6s cubic-bezier(.22,.61,.36,1) forwards;
+  animation-delay:calc(var(--i) * 90ms)}
+@keyframes tileIn{to{opacity:1;transform:none}}
+.tile img{width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .6s cubic-bezier(.22,.61,.36,1)}
+.tile{box-shadow:0 16px 46px -22px var(--tg,rgba(var(--glow-rgb),.8));
+  transition:border-color .35s,transform .4s cubic-bezier(.22,.61,.36,1),box-shadow .5s}
+.tile:hover{border-color:rgba(255,255,255,.24);
+  box-shadow:0 20px 56px -18px var(--tg,rgba(var(--glow-rgb),.9))}
+.tile:hover img{transform:scale(1.05)}
+.tile:focus-visible{outline:2px solid var(--glow);outline-offset:3px}
+
+.lb{position:fixed;inset:0;z-index:130;background:rgba(3,2,6,.95);display:none;
+  align-items:center;justify-content:center;padding:22px;backdrop-filter:blur(6px)}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:88vh;object-fit:contain;border-radius:var(--cut)}
+.lb button{position:absolute;top:18px;right:20px;width:44px;height:44px;cursor:pointer;
+  background:rgba(255,255,255,.08);color:#fff;border:1px solid var(--line);
+  border-radius:50%;font-size:1.4rem;line-height:1}
+
+
+.cta-big{text-align:center;padding:104px 0}
+.socials{display:flex;gap:14px;justify-content:center;margin-top:30px}
+.soc{width:52px;height:52px;border-radius:50%;border:1px solid var(--line);display:flex;
+  align-items:center;justify-content:center;color:var(--text);text-decoration:none;
+  transition:border-color .28s,color .28s,transform .28s,box-shadow .3s}
+.soc:hover{border-color:var(--glow);color:var(--glow);transform:translateY(-3px);
+  box-shadow:0 0 22px -4px rgba(var(--glow-rgb),.8)}
+.soc svg{width:22px;height:22px}
+
+footer{border-top:1px solid var(--line);background:#040308}
+.foot{max-width:var(--wrap);margin:0 auto;padding:26px var(--gut);
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;
+  font-size:.79rem;color:var(--muted)}
+
+.fab{position:fixed;right:20px;bottom:20px;z-index:95;width:56px;height:56px;border-radius:50%;
+  background:rgba(var(--glow-rgb),.18);border:1px solid var(--glow);color:#fff;display:flex;
+  align-items:center;justify-content:center;text-decoration:none;backdrop-filter:blur(8px);
+  box-shadow:0 0 22px rgba(var(--glow-rgb),.45),inset 0 0 20px rgba(var(--glow-rgb),.2);
+  opacity:0;transform:scale(.85) translateY(10px);pointer-events:none;
+  transition:opacity .25s,transform .25s cubic-bezier(.22,.61,.36,1),box-shadow .4s,background .4s}
+.fab.on{opacity:1;transform:none;pointer-events:auto}
+.fab svg{width:23px;height:23px}
+
+
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--glow);outline-offset:3px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;z-index:200;background:#fff;color:#000;padding:10px 14px}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Preskoči na sadržaj</a>
+<div class="strip" aria-hidden="true"><i id="stripFill"></i></div>
+
+<header>
+  <div class="bar">
+    <a class="brand" href="#" aria-label="Space Garage MS">
+      <img src="logo-mark.png" alt="Space Garage MS" width="340" height="188">
+      <span><b>SPACE GARAGE</b><small>MS</small></span>
+    </a>
+    <nav>
+      <a href="#usluge">Usluge</a>
+      <a href="#mobilni">Dolazimo k tebi</a>
+      <a href="#galerija">Radovi</a>
+      <a href="#upit">Upit</a>
+    </nav>
+    <a class="live" id="live" href="tel:+385981363967">
+      <i class="led"></i><span class="txt" id="liveTxt">Provjeravam</span>
+      <span class="mini"><span class="sep">&middot;</span>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+        Nazovi</span></a>
+    <a class="btn btn--glow" href="tel:+385981363967">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+      098 136 3967</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="film" id="film" aria-hidden="true">
+    <video id="bgv" playsinline muted loop autoplay preload="auto" poster="nebo-amb-poster.jpg" width="640" height="648">
+      <source src="nebo-amb.webm" type="video/webm">
+      <source src="nebo-amb.mp4" type="video/mp4">
+    </video>
+  </div>
+  <span class="veil" aria-hidden="true"></span>
+  <div class="wrap">
+    <div class="hgrid">
+      <div>
+        <p class="tagline"><span>Tvoj auto.</span><span class="lit">Tvoj stil.</span><span>Naša strast.</span></p>
+        <div class="lede"><h1>Ambijentalno osvjetljenje, zvjezdano nebo, tapaciranje i multimedija u Kninu.</h1> Klikni boju i vidi kako bi ti to stajalo.</div>
+        <div class="cta">
+          <a class="btn btn--glow" href="#upit">Pošalji upit</a>
+          <a class="btn btn--line" href="tel:+385981363967">
+            Nazovi
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="amb">
+          <span class="lbl">Odaberi boju</span>
+          <div class="dots" id="dots" role="group" aria-label="Boja ambijentalnog osvjetljenja"></div>
+        </div>
+      </div>
+      <div>
+        <div class="prev">
+          <img id="pvA" src="ambijentalno-osvjetljenje-zvjezdano-nebo-u-autu.jpg" alt="Ambijentalno osvjetljenje i zvjezdano nebo u autu" width="820" height="1093" fetchpriority="high">
+          <img id="pvB" class="off" alt="Ambijentalno osvjetljenje u autu u drugoj boji" aria-hidden="true">
+          <span class="bar-b" id="pvLabel">Ljubičasta</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="usluge">
+  <div class="wrap">
+    <div class="head">
+      <h2>Što radimo</h2>
+      <p>Sve što ide u interijer, od svjetla do elektronike. Osam stvari, sve na tvom autu.</p>
+    </div>
+    <div class="svcs" id="svcs">
+      <article class="card" style="--i:0"><span class="wash"></span><span class="no" aria-hidden="true">01</span><span class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17h16M6 17V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8"/><path d="M4 13h16"/></svg></span><h3>Ambijentalno osvjetljenje</h3><p>Trake u vratima, armaturi i podnožju. Boju i jačinu biraš ti.</p></article>
+      <article class="card" style="--i:1"><span class="wash"></span><span class="no" aria-hidden="true">02</span><span class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="1"/><circle cx="13" cy="5" r="1"/><circle cx="18" cy="9" r="1"/><circle cx="9" cy="13" r="1"/><circle cx="16" cy="16" r="1"/><circle cx="5" cy="17" r="1"/></svg></span><h3>Zvjezdano nebo</h3><p>Optička vlakna u krovu. Može gusto, može tek pokoja, s padajućom zvijezdom.</p></article>
+      <article class="card" style="--i:2"><span class="wash"></span><span class="no" aria-hidden="true">03</span><span class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20v-3a5 5 0 0 1 10 0v3"/><path d="M8 14V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v8"/></svg></span><h3>Tapaciranje</h3><p>Sjedala, volan i obloge. Koža, alcantara ili tkanina, šav u boji koju odabereš.</p></article>
+      <article class="card" style="--i:3"><span class="wash"></span><span class="no" aria-hidden="true">04</span><span class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h3l2-4 3 8 2-5 2 3h4"/></svg></span><h3>Dijagnostika</h3><p>Očitamo greške, provjerimo elektroniku i obrišemo kodove.</p></article>
+      <article class="card" style="--i:4"><span class="wash"></span><span class="no" aria-hidden="true">05</span><span class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M9 21h6"/></svg></span><h3>Multimedija</h3><p>Ekran, CarPlay i Android Auto, kamera i zvučnici.</p></article>
+      <article class="card" style="--i:5"><span class="wash"></span><span class="no" aria-hidden="true">06</span><span class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 18h.01"/><path d="M8.5 14.5a5 5 0 0 1 7 0"/><path d="M5.5 11a9 9 0 0 1 13 0"/></svg></span><h3>Senzori</h3><p>Parking senzori sprijeda i straga i kamera za rikverc.</p></article>
+      <article class="card" style="--i:6"><span class="wash"></span><span class="no" aria-hidden="true">07</span><span class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4l12 16"/><path d="M8 5h8v5a6 6 0 0 1-6 6"/></svg></span><h3>Promjena pojaseva</h3><p>Pojasevi u boji koja se slaže sa šavom i svjetlom.</p></article>
+      <article class="card" style="--i:7"><span class="wash"></span><span class="no" aria-hidden="true">08</span><span class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></svg></span><h3>Detailing interijera</h3><p>Dubinsko čišćenje unutrašnjosti. Još pripremamo.</p><span class="tag">Uskoro</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec mob" id="mobilni">
+  <div class="wrap">
+    <div class="head">
+      <h2>Dolazimo k tebi</h2>
+      <p>Nemamo garažu, radimo na terenu. Mali servisi se rade tamo gdje ti je auto, ispred kuće ili na parkingu firme.</p>
+    </div>
+
+    <div class="hl">
+      <span class="pill">Naša glavna usluga</span>
+      <h3>Mobilni mali servisi</h3>
+      <div class="split">
+        <div>
+          <ul class="chk">
+            <li>Promjena ulja</li>
+            <li>Zamjena filtera</li>
+            <li>Kontrola tekućina</li>
+            <li>Sitni popravci na licu mjesta</li>
+          </ul>
+        </div>
+        <div>
+          <div class="clock" id="clock">
+            <svg viewBox="0 0 140 140" aria-hidden="true">
+              <circle class="ck-track" cx="70" cy="70" r="64"/>
+              <g class="ck-ticks"><line x1="70.0" y1="22.0" x2="70.0" y2="12.0"/><line x1="96.0" y1="25.0" x2="99.0" y2="19.8"/><line x1="115.0" y1="44.0" x2="120.2" y2="41.0"/><line x1="118.0" y1="70.0" x2="128.0" y2="70.0"/><line x1="115.0" y1="96.0" x2="120.2" y2="99.0"/><line x1="96.0" y1="115.0" x2="99.0" y2="120.2"/><line x1="70.0" y1="118.0" x2="70.0" y2="128.0"/><line x1="44.0" y1="115.0" x2="41.0" y2="120.2"/><line x1="25.0" y1="96.0" x2="19.8" y2="99.0"/><line x1="22.0" y1="70.0" x2="12.0" y2="70.0"/><line x1="25.0" y1="44.0" x2="19.8" y2="41.0"/><line x1="44.0" y1="25.0" x2="41.0" y2="19.8"/></g>
+              <circle class="ck-arc" cx="70" cy="70" r="64" pathLength="100"/>
+            </svg>
+            <span class="ck-orbit" aria-hidden="true"><i></i></span>
+            <span class="big">24/7</span>
+          </div>
+          <p class="muted" style="margin-top:12px">Telefon je uvijek uključen. Radno vrijeme je od 8 do 22.</p>
+          <div class="cta" style="margin-top:22px">
+            <a class="btn btn--glow" href="tel:+385981363967">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+              Nazovi</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="galerija">
+  <div class="wrap">
+    <div class="head"><h2>Radovi</h2>
+      <p>Nekoliko auta koje smo odradili. Ako ti se nešto sviđa, javi se pa vidimo što možemo na tvom.</p></div>
+
+    <div class="gal" id="gal">
+      <button type="button" class="tile" style="--i:0;--tg:rgba(47,64,238,.55)" aria-label="Povećaj: Plavo zvjezdano nebo i ambijentalno osvjetljenje u Mazdi, Knin"><img src="zvjezdano-nebo-ambijentalno-osvjetljenje-auto-knin.jpg" alt="Plavo zvjezdano nebo i ambijentalno osvjetljenje u Mazdi, Knin" loading="lazy" width="760" height="1013"></button>
+      <button type="button" class="tile" style="--i:1;--tg:rgba(238,47,61,.55)" aria-label="Povećaj: Crveno zvjezdano nebo i crvene LED trake u vratima"><img src="crveno-zvjezdano-nebo-led-trake-vrata.jpg" alt="Crveno zvjezdano nebo i crvene LED trake u vratima" loading="lazy" width="760" height="1013"></button>
+      <button type="button" class="tile" style="--i:2;--tg:rgba(52,238,47,.45)" aria-label="Povećaj: Zeleno zvjezdano nebo i ambijentalno osvjetljenje vrata"><img src="zeleno-zvjezdano-nebo-ambijentalno-osvjetljenje.jpg" alt="Zeleno zvjezdano nebo i ambijentalno osvjetljenje vrata" loading="lazy" width="760" height="1013"></button>
+      <button type="button" class="tile" style="--i:3;--tg:rgba(47,238,63,.45)" aria-label="Povećaj: Zelena ambijentalna traka kroz armaturu auta"><img src="zelena-ambijentalna-traka-armatura.jpg" alt="Zelena ambijentalna traka kroz armaturu auta" loading="lazy" width="760" height="1013"></button>
+      <button type="button" class="tile" style="--i:4;--tg:rgba(121,47,238,.55)" aria-label="Povećaj: Ugrađena multimedija s ekranom i ambijentalnim osvjetljenjem"><img src="ugradnja-multimedije-ekran-ambijentalno-svjetlo.jpg" alt="Ugrađena multimedija s ekranom i ambijentalnim osvjetljenjem" loading="lazy" width="760" height="1013"></button>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="pitanja">
+  <div class="wrap">
+    <div class="head">
+      <h2>Česta pitanja</h2>
+    </div>
+    <div class="faq">
+      <details open><summary><h3>Koliko košta ambijentalno osvjetljenje ili zvjezdano nebo?</h3></summary><p>Ovisi o autu i o tome koliko toga želiš. Pošalji nam marku i model pa ti kažemo cijenu. Upit ništa ne košta.</p></details>
+      <details><summary><h3>Što je zvjezdano nebo u autu?</h3></summary><p>Optička vlakna u stropu auta koja svijetle kao zvijezde. Negdje se to zove i starlight. Može biti gusto ili tek pokoja zvjezdica, a može imati i padajuću zvijezdu.</p></details>
+      <details><summary><h3>Mogu li birati boju svjetla?</h3></summary><p>Možeš. Ambijentalno osvjetljenje i zvjezdano nebo radimo u boji koju odabereš. Na vrhu stranice probaj boje i vidi kako koja stoji u autu.</p></details>
+      <details><summary><h3>Radite li tapeciranje sjedala?</h3></summary><p>Radimo. Sjedala, volan i obloge presvlačimo u kožu, alcantaru ili tkaninu, a šav može biti u boji koju odabereš.</p></details>
+      <details><summary><h3>Ugrađujete li Android Auto i CarPlay?</h3></summary><p>Da. Ugrađujemo ekrane s Android Auto i CarPlay, kameru za rikverc i parking senzore sprijeda i straga.</p></details>
+      <details><summary><h3>Dolazite li na adresu?</h3></summary><p>Dolazimo. Garažu nemamo, pa mali servis radimo tamo gdje ti je auto, ispred kuće ili na poslu. Promjena ulja, zamjena filtera, kontrola tekućina i sitni popravci. Radimo u Kninu i okolici.</p></details>
+      <details><summary><h3>Kad vas mogu dobiti?</h3></summary><p>Radno vrijeme je od 8 do 22, a na telefon se javljamo i izvan toga. Nazovi na 098 136 3967 ili pošalji upit preko stranice.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec book" id="upit">
+  <div class="wrap">
+    <div class="head">
+      <h2>Pošalji upit</h2>
+      <p>Reci nam što te zanima i javljamo se brzo.</p>
+    </div>
+
+    <div class="bform">
+      <select id="qUsl" aria-label="Usluga">
+        <option value="Ambijentalno osvjetljenje">Ambijentalno osvjetljenje</option>
+        <option value="Zvjezdano nebo">Zvjezdano nebo</option>
+        <option value="Ambijentalno i zvjezdano nebo">Ambijentalno i zvjezdano nebo</option>
+        <option value="Tapaciranje">Tapaciranje</option>
+        <option value="Multimedija">Multimedija</option>
+        <option value="Senzori">Senzori</option>
+        <option value="Promjena pojaseva">Promjena pojaseva</option>
+        <option value="Mobilni mali servis">Mobilni mali servis</option>
+        <option value="Nešto drugo">Nešto drugo</option>
+      </select>
+      <input type="text" id="qAuto" placeholder="Marka i model auta">
+      <button class="btn btn--glow full" id="qSend" type="button">
+        Pošalji upit
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+    <p class="note">Radno vrijeme je od 8 do 22, a telefon se javlja i izvan toga.</p>
+  </div>
+</section>
+
+<section class="cta-big" id="kontakt">
+  <div class="wrap">
+    <h2>Javi se</h2>
+    <div class="socials">
+      <a class="soc" href="https://wa.me/385981363967?text=Pozdrav%2C%20zanima%20me%20styling%20za%20moj%20auto.%20" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <span class="sr">WhatsApp Space Garage MS</span>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8s-.4-.1-.5.1-.6.8-.8.9-.3.2-.5 0a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.3-1.7c-.2-.3 0-.4.1-.5l.4-.5.2-.4v-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4 5.3 5.3 0 0 0 3.2.7 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.4-.3z"/></svg>
+      </a>
+      <a class="soc" href="https://instagram.com/space_garage_ms" target="_blank" rel="noopener" aria-label="Instagram">
+        <span class="sr">Instagram Space Garage MS</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a class="soc" href="tel:+385981363967" aria-label="Nazovi">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Fotografija">
+  <button type="button" id="lbx" aria-label="Zatvori">&times;</button>
+  <img id="lbi" alt="Povećana fotografija rada">
+</div>
+
+<footer><div class="foot">
+  <img class="foot-logo" src="logo.png" alt="Space Garage MS" width="346" height="225">
+  <nav class="fnav" aria-label="Podnožje">
+    <a href="#usluge">Usluge</a>
+    <a href="#mobilni">Mali servis na terenu</a>
+    <a href="#galerija">Radovi</a>
+    <a href="#pitanja">Česta pitanja</a>
+    <a href="#upit">Pošalji upit</a>
+  </nav>
+  <span>Space Garage MS &middot; Knin &middot; <a href="tel:+385981363967">098 136 3967</a></span>
+  <span>&copy; <span id="god"></span> Space Garage MS &middot; Sva prava pridržana.</span>
+</div></footer>
+
+<a class="fab" id="fab" href="tel:+385981363967" aria-label="Nazovi Space Garage MS">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+</a>
+
+
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "AutoRepair",
+ "@id": "https://www.spacegarage.net/#posao",
+ "name": "Space Garage MS",
+ "url": "https://www.spacegarage.net/",
+ "image": "https://www.spacegarage.net/og.jpg",
+ "logo": "https://www.spacegarage.net/logo.png",
+ "description": "Ambijentalno osvjetljenje, zvjezdano nebo, tapaciranje, ugradnja multimedije i mobilni mali servis u Kninu.",
+ "telephone": "+385981363967",
+ "address": {
+  "@type": "PostalAddress",
+  "addressLocality": "Knin",
+  "postalCode": "22300",
+  "addressRegion": "Šibensko-kninska županija",
+  "addressCountry": "HR"
+ },
+ "geo": {
+  "@type": "GeoCoordinates",
+  "latitude": 44.0406,
+  "longitude": 16.1966
+ },
+ "areaServed": [
+  {
+   "@type": "City",
+   "name": "Knin"
+  },
+  {
+   "@type": "AdministrativeArea",
+   "name": "Šibensko-kninska županija"
+  }
+ ],
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+   ],
+   "opens": "08:00",
+   "closes": "22:00"
+  }
+ ],
+ "sameAs": [
+  "https://instagram.com/space_garage_ms"
+ ],
+ "hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "Usluge",
+  "itemListElement": [
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Ambijentalno osvjetljenje"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Zvjezdano nebo"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Tapaciranje"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Dijagnostika"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Multimedija"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Senzori"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Promjena pojaseva"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Detailing interijera"
+    }
+   }
+  ]
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Space Garage MS",
+ "url": "https://www.spacegarage.net/",
+ "inLanguage": "hr"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Koliko košta ambijentalno osvjetljenje ili zvjezdano nebo?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ovisi o autu i o tome koliko toga želiš. Pošalji nam marku i model pa ti kažemo cijenu. Upit ništa ne košta."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Što je zvjezdano nebo u autu?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Optička vlakna u stropu auta koja svijetle kao zvijezde. Negdje se to zove i starlight. Može biti gusto ili tek pokoja zvjezdica, a može imati i padajuću zvijezdu."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Mogu li birati boju svjetla?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Možeš. Ambijentalno osvjetljenje i zvjezdano nebo radimo u boji koju odabereš. Na vrhu stranice probaj boje i vidi kako koja stoji u autu."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Radite li tapeciranje sjedala?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Radimo. Sjedala, volan i obloge presvlačimo u kožu, alcantaru ili tkaninu, a šav može biti u boji koju odabereš."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Ugrađujete li Android Auto i CarPlay?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Da. Ugrađujemo ekrane s Android Auto i CarPlay, kameru za rikverc i parking senzore sprijeda i straga."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Dolazite li na adresu?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Dolazimo. Garažu nemamo, pa mali servis radimo tamo gdje ti je auto, ispred kuće ili na poslu. Promjena ulja, zamjena filtera, kontrola tekućina i sitni popravci. Radimo u Kninu i okolici."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Kad vas mogu dobiti?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Radno vrijeme je od 8 do 22, a na telefon se javljamo i izvan toga. Nazovi na 098 136 3967 ili pošalji upit preko stranice."
+   }
+  }
+ ]
+}
+</script>
+
+<script>
+/* Broj na koji idu svi WhatsApp upiti. */
+var TEL = "385981363967";
+var RADNO = {od:8, do:22};                  /* radno vrijeme */
+
+
+/* boja -> slika. Dodaj boju = dodaj redak + hero-*.jpg */
+var BOJE=[
+  {n:"Ljubičasta",h:"#A855F7",r:"168,85,247",img:"ambijentalno-osvjetljenje-zvjezdano-nebo-u-autu.jpg"},
+  {n:"Plava",     h:"#3B82F6",r:"59,130,246", img:"hero-blue.jpg"},
+  {n:"Ledena",    h:"#38BDF8",r:"56,189,248", img:"hero-ice.jpg"},
+  {n:"Crvena",    h:"#F43F5E",r:"244,63,94",  img:"hero-red.jpg"},
+  {n:"Zelena",    h:"#34D399",r:"52,211,153", img:"hero-green.jpg"},
+  {n:"Zlatna",    h:"#FBBF24",r:"251,191,36", img:"hero-gold.jpg"}
+];
+
+
+(function(){
+/* Namjerno isključeno: Android ušteda baterije uključi "smanjene animacije"
+   i onda ih ubije ili pretvori u treperenje, pa se animacije uvijek vrte. */
+var reduce = false;
+var root = document.documentElement;
+var $ = function(id){ return document.getElementById(id); };
+
+/* ---------------- radno vrijeme uživo ---------------- */
+function zgHour(){
+  try{
+    var p = new Intl.DateTimeFormat('hr-HR',{timeZone:'Europe/Zagreb',hour:'2-digit',minute:'2-digit',hour12:false})
+      .formatToParts(new Date());
+    var h=0,m=0;
+    p.forEach(function(x){ if(x.type==='hour') h=+x.value; if(x.type==='minute') m=+x.value; });
+    return h + m/60;
+  }catch(e){ var d=new Date(); return d.getHours()+d.getMinutes()/60; }
+}
+function tickHours(){
+  var h=zgHour(), open = h>=RADNO.od && h<RADNO.do, el=$('live');
+  el.classList.toggle('shut', !open);
+  $('liveTxt').textContent = open ? 'Otvoreno do 22:00' : 'Zatvoreno do 08:00';
+  if(open){ el.removeAttribute('href'); el.setAttribute('aria-label','Otvoreno'); }
+  else { el.setAttribute('href','tel:+385981363967'); el.setAttribute('aria-label','Zatvoreno, nazovi'); }
+}
+tickHours(); setInterval(tickHours, 60000);
+
+/* ---------------- usluge ---------------- */
+var box=$('svcs');
+if('IntersectionObserver' in window){
+  new IntersectionObserver(function(es,o){ es.forEach(function(e){
+    if(e.isIntersecting){ box.classList.add('in'); o.disconnect(); }
+  }); },{threshold:.12}).observe(box);
+} else { box.classList.add('in'); }
+
+/* ---------------- sat 24/7 ---------------- */
+(function(){
+  var c=$('clock');
+  if(!c) return;
+  if(reduce || !('IntersectionObserver' in window)){ c.classList.add('in'); return; }
+  new IntersectionObserver(function(es,o){ es.forEach(function(e){
+    if(e.isIntersecting){ c.classList.add('in'); o.disconnect(); }
+  }); },{threshold:.4}).observe(c);
+})();
+
+/* ---------------- galerija ---------------- */
+(function(){
+  var gal=$('gal'), lb=$('lb'), lbi=$('lbi'), lbx=$('lbx');
+  [].forEach.call(gal.querySelectorAll('.tile'), function(b){
+    b.addEventListener('click',function(){
+      var im=b.querySelector('img');
+      lbi.src=im.getAttribute('src'); lbi.alt=im.alt; lb.classList.add('on'); lbx.focus();
+    });
+  });
+  function close(){ lb.classList.remove('on'); lbi.removeAttribute('src'); }
+  lbx.addEventListener('click',close);
+  lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es,o){ es.forEach(function(e){
+      if(e.isIntersecting){ gal.classList.add('in'); o.disconnect(); }
+    }); },{threshold:.1}).observe(gal);
+  } else { gal.classList.add('in'); }
+})();
+
+/* ---------------- boja ambijenta + preview slike ---------------- */
+var dots=$('dots'), A=$('pvA'), B=$('pvB'), showA=true, swapping=false, activeC=0;
+function setPreview(src){
+  if(swapping) return;
+  var next = showA ? B : A, cur = showA ? A : B;
+  if(next.getAttribute('src')===src){ return; }
+  swapping=true;
+  function reveal(){
+    next.classList.remove('off'); cur.classList.add('off');
+    showA=!showA; swapping=false;
+  }
+  next.onload=null; next.onerror=function(){ swapping=false; };
+  next.onload=reveal;
+  next.src=src;
+  if(next.complete && next.naturalWidth){ next.onload=null; reveal(); }
+}
+BOJE.forEach(function(c,i){
+  var b=document.createElement('button');
+  b.className='dot'; b.type='button'; b.style.setProperty('--c',c.h);
+  b.setAttribute('aria-label',c.n);
+  b.setAttribute('aria-pressed', i===0?'true':'false');
+  b.addEventListener('click',function(){
+    root.style.setProperty('--glow',c.h);
+    root.style.setProperty('--glow-rgb',c.r);
+    [].forEach.call(dots.children,function(x){ x.setAttribute('aria-pressed','false'); });
+    b.setAttribute('aria-pressed','true');
+    activeC=i;
+    $('pvLabel').textContent=c.n;
+    setPreview(c.img);
+    if(!reduce) flash();
+  });
+  dots.appendChild(b);
+});
+/* ostale boje se dovuku tek kad se stranica smiri */
+window.addEventListener('load',function(){
+  setTimeout(function(){ BOJE.slice(1).forEach(function(c){
+    if(c.img.slice(0,5)!=='data:'){ var i=new Image(); i.src=c.img; }
+  }); },1200);
+});
+function flash(){
+  var el=document.getElementById('svcs');
+  if(!el) return;
+  el.style.transition='filter .12s'; el.style.filter='brightness(1.6)';
+  setTimeout(function(){ el.style.filter='';
+    setTimeout(function(){ el.style.transition=''; },240); },120);
+}
+
+/* ---------------- reflektor po zvjezdanom nebu ---------------- */
+var film=$('film'), bgv=$('bgv'), hero=document.querySelector('.hero');
+var tx=50, ty=34, cx=50, cy=34, raf=0, idle=true;
+
+function paint(){
+  raf=0;
+  cx += (tx-cx)*0.12;
+  cy += (ty-cy)*0.12;
+  film.style.setProperty('--mx', cx.toFixed(2)+'%');
+  film.style.setProperty('--my', cy.toFixed(2)+'%');
+  if(Math.abs(tx-cx)>0.05 || Math.abs(ty-cy)>0.05) raf=requestAnimationFrame(paint);
+}
+function nudge(){ if(!raf) raf=requestAnimationFrame(paint); }
+
+if(!reduce){
+  hero.addEventListener('pointermove',function(e){
+    var r=hero.getBoundingClientRect();
+    tx=((e.clientX-r.left)/r.width)*100;
+    ty=((e.clientY-r.top)/r.height)*100;
+    idle=false; nudge();
+  });
+  hero.addEventListener('pointerleave',function(){ idle=true; });
+
+  /* bez miša svjetlo lagano luta samo od sebe */
+  var t0=performance.now();
+  (function drift(t){
+    if(idle){
+      var k=(t-t0)/1000;
+      tx=50+26*Math.sin(k*0.28);
+      ty=36+16*Math.sin(k*0.19+1.3);
+      nudge();
+    }
+    requestAnimationFrame(drift);
+  })(t0);
+}
+
+/* pauziraj video kad hero nije u kadru */
+new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){ var p=bgv.play(); if(p&&p.catch) p.catch(function(){}); }
+    else bgv.pause();
+  });
+},{threshold:0}).observe(hero);
+
+/* ---------------- paljenje kartica ---------------- */
+
+
+/* ---------------- WhatsApp upit ---------------- */
+$('qSend').addEventListener('click',function(){
+  var usl=$('qUsl').value, auto=$('qAuto').value.trim();
+  var m='Pozdrav, zanima me: '+usl+'.';
+  if(auto) m+='\nAuto: '+auto;
+  m+='\nBoja koja mi se svidjela: '+BOJE[activeC].n+'\n';
+  window.open('https://wa.me/'+TEL+'?text='+encodeURIComponent(m),'_blank');
+});
+
+/* ---------------- scroll traka + fab ---------------- */
+var fill=$('stripFill'), fab=$('fab');
+function onScroll(){
+  var h=document.documentElement.scrollHeight-innerHeight;
+  fill.style.height=(h>0?(scrollY/h)*100:0).toFixed(2)+'%';
+  fab.classList.toggle('on', scrollY>500);
+}
+addEventListener('scroll',onScroll,{passive:true}); onScroll();
+$('god').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
