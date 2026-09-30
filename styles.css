@@ -413,17 +413,22 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .card .price small{display:block;font-family:Inter,sans-serif;font-weight:600;font-size:.58rem;letter-spacing:.2em;
   text-transform:uppercase;color:var(--glow);margin-bottom:4px;transition:color .5s}
 
-/* usluge u dva stupca na mobitelu */
+/* usluge na mobitelu: jedan stupac, ikona lijevo, cijena ispod crte
+   (zamijenjeno 30.09.2026., dva stupca su bila pretijesna) */
 @media(max-width:699px){
-  .svcs{grid-template-columns:repeat(2,1fr);gap:10px}
-  .card{padding:18px 14px 16px;min-height:0}
-  .card .ring{width:40px;height:40px;margin-bottom:12px}
-  .card .ring svg{width:19px;height:19px}
-  .card .no{font-size:1.7rem;top:12px;right:12px}
-  .card h3{font-size:.84rem}
-  .card p{font-size:.77rem;line-height:1.5;margin-top:6px}
-  .card .price{font-size:.84rem;padding-top:12px}
-  .card .tag{position:static;align-self:flex-start;margin-top:12px}
+  .svcs{gap:12px}
+  .card{display:grid;grid-template-columns:50px 1fr;column-gap:16px;align-items:start;
+    padding:20px 18px 18px;min-height:0}
+  .card .ring{grid-column:1;grid-row:1 / span 3;width:50px;height:50px;margin:0}
+  .card .ring svg{width:23px;height:23px}
+  .card h3,.card p,.card .price,.card .tag{grid-column:2}
+  .card h3{padding-right:44px;margin-top:3px}
+  .card p{margin-top:6px}
+  .card .no{font-size:1.9rem;top:16px;right:16px}
+  .card .price{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;margin-top:14px;padding-top:12px;
+    border-top:1px solid rgba(var(--glow-rgb),.16)}
+  .card .price small{display:inline;margin:0}
+  .card .tag{position:static;justify-self:start;margin-top:14px}
 }
 
 /* opisi ispod radova */
@@ -434,3 +439,19 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 
 /* link na Instagram ispod radova */
 .more{text-align:center;margin-top:30px}
+
+
+/* birač broja za poziv (30.09.2026.) */
+.cs{border:1px solid rgba(var(--glow-rgb),.4);border-radius:22px;padding:0;background:#0d0b14;color:#fff;
+  width:min(360px,calc(100% - 32px));box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 60px rgba(var(--glow-rgb),.15)}
+.cs::backdrop{background:rgba(3,2,6,.72);backdrop-filter:blur(4px)}
+.cs-in{display:grid;gap:10px;padding:22px 18px 14px}
+.cs-t{margin:0 0 4px 4px;font-family:Saira,sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--glow)}
+.cs-n{display:flex;align-items:center;gap:12px;padding:15px 16px;border-radius:14px;text-decoration:none;color:#fff;
+  font-family:Saira,sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:.03em;
+  border:1px solid rgba(var(--glow-rgb),.35);background:rgba(var(--glow-rgb),.1);transition:background .25s,border-color .25s}
+.cs-n svg{width:18px;height:18px;flex:none;color:var(--glow)}
+.cs-n:hover,.cs-n:focus-visible{background:rgba(var(--glow-rgb),.2);border-color:var(--glow)}
+.cs-x{margin-top:2px;padding:10px;border:0;background:none;color:rgba(255,255,255,.6);font:inherit;font-size:.9rem;cursor:pointer}
+.cs-x:hover{color:#fff}
+@media(max-width:600px){.cs{margin:auto auto max(12px,env(safe-area-inset-bottom))}}
