@@ -1,26 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.spacegarage.net/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <image:image>
-      <image:loc>https://www.spacegarage.net/ambijentalno-osvjetljenje-zvjezdano-nebo-u-autu.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.spacegarage.net/zvjezdano-nebo-ambijentalno-osvjetljenje-auto-knin.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.spacegarage.net/crveno-zvjezdano-nebo-led-trake-vrata.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.spacegarage.net/zeleno-zvjezdano-nebo-ambijentalno-osvjetljenje.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.spacegarage.net/zelena-ambijentalna-traka-armatura.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.spacegarage.net/ugradnja-multimedije-ekran-ambijentalno-svjetlo.jpg</image:loc>
-    </image:image>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.spacegarage.net/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.spacegarage.net/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.spacegarage.net/"/>
+    <image:image><image:loc>https://www.spacegarage.net/ambijentalno-osvjetljenje-zvjezdano-nebo-u-autu.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.spacegarage.net/zvjezdano-nebo-ambijentalno-osvjetljenje-auto-knin.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.spacegarage.net/crveno-zvjezdano-nebo-led-trake-vrata.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.spacegarage.net/zeleno-zvjezdano-nebo-ambijentalno-osvjetljenje.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.spacegarage.net/zelena-ambijentalna-traka-armatura.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.spacegarage.net/crveno-ambijentalno-osvjetljenje-peugeot.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.spacegarage.net/ugradnja-multimedije-ekran-ambijentalno-svjetlo.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.spacegarage.net/en/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.spacegarage.net/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.spacegarage.net/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.spacegarage.net/"/>
+  </url>
+  <url>
+    <loc>https://www.spacegarage.net/kolacici/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.spacegarage.net/kolacici/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.spacegarage.net/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.spacegarage.net/kolacici/"/>
+  </url>
+  <url>
+    <loc>https://www.spacegarage.net/en/privacy/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.spacegarage.net/kolacici/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.spacegarage.net/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.spacegarage.net/kolacici/"/>
   </url>
 </urlset>
